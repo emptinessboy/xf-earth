@@ -3,7 +3,7 @@
   <!-- 顶部文字 -->
   <div
     th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
-    class="bg-cover bg-center bg-no-repeat"
+    class="index-head bg-cover bg-center bg-no-repeat min-h-fit my-10"
     th:styleappend="${'background: ' + theme.config.layout.header_background + ';'}"
     th:classappend="${theme.config.layout.header_widget == 'site_title' ? 'h-96' : ''}"
   >

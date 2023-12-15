@@ -370,8 +370,8 @@ spec:
         - $formkit: textarea
           name: big_text
           label: 大标题
-          value: A postgraduate students of Hangzhou DianZi University.
+          value: A interdisciplinary postgraduate student in HDU.
         - $formkit: textarea
           name: sec_text
           label: 副标题
-          value: I am Xiaofan Hu, an interdisciplinary product manager who is passionate about interface design, experience design and product design. At present, I work at Ant Group as the lead of the Yuque product and design team
+          value: I am Xiaofan Hu, a graduate student in an interdisciplinary field, previously a coder, now engaged in art design and human-computer interaction research.
