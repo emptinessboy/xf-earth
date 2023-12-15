@@ -1,21 +1,21 @@
 apiVersion: theme.halo.run/v1alpha1
 kind: Theme
 metadata:
-  name: theme-earth
+  name: xf-earth
   annotations:
     # Add supports for Halo App Store
     # https://halo.run/store/apps/app-KgWqR
-    "store.halo.run/app-id": "app-KgWqR"
+    # "store.halo.run/app-id": "app-KgWqR"
 spec:
-  displayName: Earth
+  displayName: hxf-earth
   author:
-    name: halo-dev
-    website: https://halo.run
-  description: Default theme for Halo 2.0
+    name: hxf
+    website: https://www.emptinessboy.com
+  description: 晓帆的个人简历
   logo: https://halo.run/logo
-  website: https://github.com/halo-dev/theme-earth
-  repo: https://github.com/halo-dev/theme-earth.git
-  settingName: "theme-earth-setting"
-  configMapName: "theme-earth-configMap"
+  website: https://github.com/emptinessboy/xf-earth
+  repo: https://github.com/emptinessboy/xf-earth.git
+  settingName: "theme-hxfearth-setting"
+  configMapName: "theme-hxfearth-configMap"
   version: 1.7.1
   require: ">=2.8.0"
