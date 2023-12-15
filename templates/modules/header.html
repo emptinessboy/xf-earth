@@ -8,16 +8,16 @@
     <div
       id="mobile-header-menu"
       class="rounded-2xl h-14 w-full mx-5 items-center justify-center flex bg-slate-200/50 dark:bg-zinc-800/50 backdrop-blur-3xl overflow-hidden">
-      <div th:if="${menu != null} and ${not #lists.isEmpty(menu.menuItems)}" class="items-center gap-8 flex min-h-max w-full h-full justify-center overflow-hidden">
+      <div th:if="${menu != null} and ${not #lists.isEmpty(menu.menuItems)}" class="items-center gap-4 flex min-h-max w-full h-full justify-center overflow-hidden">
         <button
           th:each="menuItem : ${menu.menuItems}"
-          class="dark:hover:bg-zinc-700/50 w-full relative cursor-pointer text-sm font-medium transition-all flex-1 text-center h-full flex justify-center items-center  rounded-3xl overflow-hidden"
+          class="hover:bg-zinc-300/50 dark:hover:bg-zinc-700/50 w-full relative cursor-pointer text-sm font-medium transition-all flex-1 text-center h-full flex justify-center items-center  rounded-3xl overflow-hidden"
           x-data="dropdown"
           @mouseenter="open()"
           @mouseleave="close()"
         >
           <a
-            class="text-gray-600 hover:text-blue-600 dark:text-slate-50 dark:hover:text-gray-300"
+            class="text-gray-600 hover:text-gray-950 dark:text-slate-50 dark:hover:text-gray-300"
             th:href="@{${menuItem.status.href}}"
             th:text="${menuItem.status.displayName}"
             th:target="${menuItem.spec.target?.value}"
@@ -80,8 +80,8 @@
           </a>
         </div>
       </div>
-      <div class="-ml-10 items-center justify-center flex hidden sm:flex">
-        <ul th:if="${menu != null} and ${not #lists.isEmpty(menu.menuItems)}" class="items-center gap-8 flex min-h-max">
+      <div class="items-center justify-center hidden sm:flex">
+        <ul th:if="${menu != null} and ${not #lists.isEmpty(menu.menuItems)}" class="items-center gap-4 lg:gap-8 flex min-h-max">
           <li
             th:each="menuItem : ${menu.menuItems}"
             class="relative cursor-pointer text-sm font-medium transition-all"
@@ -124,7 +124,7 @@
         </ul>
       </div>
 
-      <div class="flex items-center">
+      <div class="ml-14 flex items-center">
         <ul x-data="colorSchemeSwitcher" class="flex items-center gap-4">
           <!--        <li class="sm:hidden" x-on:click="open = true">-->
           <!--          <div class="i-tabler-menu-2 text-lg text-gray-600 hover:text-blue-600 dark:text-slate-100"></div>-->
@@ -155,7 +155,7 @@
           </li>
           <li
             x-data="dropdown"
-            class="hidden sm:relative cursor-pointer transition-all"
+            class="hidden sm:block relative cursor-pointer transition-all"
             th:with="currentUser = ${contributorFinder.getContributor(#authentication.name)}"
             @mouseenter="open()"
             @mouseleave="close()"
