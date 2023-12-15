@@ -20,10 +20,13 @@ Alpine.start();
 
 const onScroll = () => {
   const headerMenu = document.getElementById("header-menu");
+  const mobileHeaderMenu = document.getElementById("mobile-header-menu");
   if (window.scrollY > 0) {
     headerMenu?.classList.add("menu-sticky");
+    mobileHeaderMenu?.classList.add("menu-sticky");
   } else {
     headerMenu?.classList.remove("menu-sticky");
+    mobileHeaderMenu?.classList.remove("menu-sticky");
   }
 };
 
