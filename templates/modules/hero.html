@@ -1,4 +1,23 @@
 <section th:fragment="hero(isHome, cover, title)">
+
+  <!-- 顶部文字 -->
+  <div
+    th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
+    class="bg-cover bg-center bg-no-repeat"
+    th:styleappend="${'background: ' + theme.config.layout.header_background + ';'}"
+    th:classappend="${theme.config.layout.header_widget == 'site_title' ? 'h-96' : ''}"
+  >
+    <th:block th:switch="${theme.config.layout.header_widget}">
+
+      <th:block th:case="latest_post_grid">
+        <div class="container mx-auto flex h-full flex-col items-center justify-center gap-3 py-6">
+          <span class="text-5xl text-white" th:text="${theme.config.jianli.big_text}"></span>
+          <span class="text-sm font-light text-white opacity-50" th:text="${theme.config.jianli.sec_text}"></span>
+        </div>
+      </th:block>
+    </th:block>
+  </div>
+  <!-- 首页列表/或其他 -->
   <div
     th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
     class="bg-cover bg-center bg-no-repeat"
@@ -8,7 +27,7 @@
     <th:block th:switch="${theme.config.layout.header_widget}">
       <th:block th:case="latest_post" th:with="posts = ${postFinder.list(1,1)}">
         <div class="container mx-auto py-6" th:if="${posts.total gt 0}">
-          <th:block th:replace="~{modules/featured-post-card :: featured-post-card(post=${posts.items[0]})}" />
+          <th:block th:replace="~{modules/featured-post-card :: featured-post-card(post=${posts.items[0]})}"/>
         </div>
       </th:block>
       <th:block th:case="latest_post_grid" th:with="posts = ${postFinder.list(1,5)}">
@@ -37,6 +56,7 @@
       </th:block>
     </th:block>
   </div>
+  <!-- 文章页头图 -->
   <th:block th:if="${theme.config.layout.content_header} and ${not #strings.isEmpty(cover)}">
     <div class="relative">
       <div

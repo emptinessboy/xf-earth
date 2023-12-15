@@ -161,7 +161,7 @@ spec:
         - $formkit: repeater
           name: social_media
           label: 社交媒体
-          value: []
+          value: [ ]
           children:
             - $formkit: select
               name: icon
@@ -271,7 +271,7 @@ spec:
           id: menus
           key: menus
           label: 菜单组
-          value: []
+          value: [ ]
           children:
             - $formkit: menuRadio
               name: name
@@ -281,7 +281,7 @@ spec:
         - $formkit: repeater
           name: social_media
           label: 社交媒体
-          value: []
+          value: [ ]
           children:
             - $formkit: select
               name: icon
@@ -363,3 +363,15 @@ spec:
           name: gongan_link
           label: 公安联网备案跳转链接
           value: https://beian.mps.gov.cn/#/query/webSearch
+
+    - group: jianli
+      label: 个人简历
+      formSchema:
+        - $formkit: textarea
+          name: big_text
+          label: 大标题
+          value: A postgraduate students of Hangzhou DianZi University.
+        - $formkit: textarea
+          name: sec_text
+          label: 副标题
+          value: I am Xiaofan Hu, an interdisciplinary product manager who is passionate about interface design, experience design and product design. At present, I work at Ant Group as the lead of the Yuque product and design team
