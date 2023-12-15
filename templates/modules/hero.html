@@ -3,7 +3,7 @@
   <!-- 顶部文字 -->
   <div
     th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
-    class="index-head bg-cover bg-center bg-no-repeat min-h-fit my-10"
+    class="index-head bg-cover bg-center bg-no-repeat min-h-fit my-20 mx-15"
     th:styleappend="${'background: ' + theme.config.layout.header_background + ';'}"
     th:classappend="${theme.config.layout.header_widget == 'site_title' ? 'h-96' : ''}"
   >
@@ -11,8 +11,8 @@
 
       <th:block th:case="latest_post_grid">
         <div class="container mx-auto flex h-full flex-col items-center justify-center gap-3 py-6">
-          <span class="text-5xl text-white" th:text="${theme.config.jianli.big_text}"></span>
-          <span class="text-sm font-light text-white opacity-50" th:text="${theme.config.jianli.sec_text}"></span>
+          <span class="text-5xl" th:text="${theme.config.jianli.big_text}"></span>
+          <span class="text-xl font-light opacity-50 mt-10" th:text="${theme.config.jianli.sec_text}"></span>
         </div>
       </th:block>
     </th:block>
