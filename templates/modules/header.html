@@ -8,7 +8,7 @@
     <div
       id="mobile-header-menu"
       class="rounded-2xl h-14 w-full mx-5 items-center justify-center flex bg-slate-200/50 dark:bg-zinc-800/50 backdrop-blur-3xl overflow-hidden">
-      <div th:if="${menu != null} and ${not #lists.isEmpty(menu.menuItems)}" class="items-center gap-4 flex min-h-max w-full h-full justify-center overflow-hidden">
+      <div th:if="${menu != null} and ${not #lists.isEmpty(menu.menuItems)}" class="items-center gap-2 flex min-h-max w-full h-full justify-center overflow-hidden">
         <button
           th:each="menuItem : ${menu.menuItems}"
           class="hover:bg-zinc-300/50 dark:hover:bg-zinc-700/50 w-full relative cursor-pointer text-sm font-medium transition-all flex-1 text-center h-full flex justify-center items-center  rounded-3xl overflow-hidden"
